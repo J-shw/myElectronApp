@@ -4,12 +4,27 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^29.1.4"
+    "electron": "^29.1.4",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "your.app.id",
+    "productName": "My first app",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "icon": "assets/images/goose.png"
+    },
+    "win": {
+      "icon": "assets/images/goose.png"
+    }
   }
 }

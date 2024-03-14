@@ -1,9 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
 }
 
-title {
+.title {
     background-color: whitesmoke;
     padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#current-time {
+    font-size: xx-large;
 }
