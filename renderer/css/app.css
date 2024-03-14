@@ -12,3 +12,7 @@ body {
 p {
     text-align: center;
 }
+
+#current-time {
+    font-size: xx-large;
+}
