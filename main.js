@@ -11,7 +11,7 @@ function createWindow() {
   });
 
   // Loads HTML file into the window
-  win.loadFile('app/index.html');
+  win.loadFile('renderer/app.html');
 }
 
 // Calls createWindow() when the app is ready
