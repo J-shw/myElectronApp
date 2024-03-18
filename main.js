@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron');
+const { ipcMain } = require("electron")
 
 // Creates the main window
 function createWindow() {
@@ -6,7 +7,8 @@ function createWindow() {
     width: 800,              
     height: 600,             
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false,
     }
   });
 
@@ -16,6 +18,11 @@ function createWindow() {
 
 // Calls createWindow() when the app is ready
 app.whenReady().then(createWindow);
+
+ipcMain.handle("console", (event, line) => {
+  console.log(`Received from frontend: ${line}`)
+  return `Backend confirms it received: ${line}`
+})
 
 // Quits the app when all windows are closed (Windows & Linux)
 app.on('window-all-closed', () => {
